@@ -21,11 +21,11 @@
   <!--菜单区域左侧荤菜栏-->
   <view class="left">
     <block wx:for="{{meatMenu}}" wx:key="{{index}}">
-      <view class="element">
+      <view class="element" id="{{index}}" bindtap="bindElementTap">
         <view class="mealName"> {{index}} </view>
         <view class="mealInfo"> 
           <text>¥{{item}}</text>
-          <icon type="success_no_circle" hidden="{{false}}"/>
+          <icon type="success_no_circle" hidden="{{meatsCheck[index]}}"/>
         </view>
       </view>
     </block>
@@ -35,11 +35,11 @@
     <!--菜单右侧素菜区-->
     <view class="vegetarian">
       <block wx:for="{{vegetarianMenu}}" wx:key="{{index}}">
-        <view class="element">
+        <view class="element" id="{{index}}" bindtap="bindElementTap">
           <view class="mealName"> {{index}} </view>
           <view class="mealInfo"> 
             <text>¥{{item}}</text>
-            <icon type="success_no_circle" hidden="{{false}}"/>
+            <icon type="success_no_circle" hidden="{{meatsCheck[index]}}"/>
           </view>
         </view>
       </block>
@@ -47,10 +47,10 @@
     <!--菜单右侧套餐区-->
     <view class="pack">
       <block wx:for="{{packMenu}}" wx:key="{{index}}">
-        <view class="element">
+        <view class="element" id="{{item}}" bindtap="bindElementTap">
           <view class="mealName"> {{item}} </view>
           <view class="mealInfo"> 
-            <icon type="success_no_circle" hidden="{{false}}"/>
+            <icon type="success_no_circle" hidden="{{meatsCheck[item]}}"/>
           </view>
         </view>
       </block>

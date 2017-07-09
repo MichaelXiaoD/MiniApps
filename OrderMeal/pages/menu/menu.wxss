@@ -27,15 +27,12 @@ view {
 /*负责菜品栏菜品信息区域的渲染，包括价格和订餐与否等信息*/
 .element .mealInfo {
   width: 150rpx;
+  height: 65rpx;
   justify-content: flex-start;
 }
 /*菜品价格区域*/
 .element .mealInfo text {
-  width: 90rpx;
-}
-/*菜品订餐与否的区域*/
-.element .mealInfo icon {
-  width: 60rpx;
+  width: 80rpx;
 }
 
 /*菜单信息区域，包括时间等信息的区域*/
@@ -119,6 +116,11 @@ view {
 }
 .menuView .right .pack .element {
   background-color: rgba(87, 107, 149, 0.1);
+}
+.menuView .right .pack .element .mealInfo {
+  justify-content: flex-end;
+  position: relative;
+  left: -10rpx;
 }
 
 /*提交订餐区域的渲染*/

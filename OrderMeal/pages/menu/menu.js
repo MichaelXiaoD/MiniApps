@@ -5,6 +5,13 @@ var meats = { "手撕兔": 2.4, "重庆毛血旺": 2.4, "香辣鸭腿": 2.0, "�
 var vegetarian = {"跳水笋尖": 0.4, "芋儿白菜": 0.4}
 var pack = ["西芹拌白菜", "茄子肉丁", "旺瓜肉丝", "肉末四季豆", "白油冬瓜", "青椒土豆片"]
 
+var meatsVisible = { "手撕兔": true, "重庆毛血旺": true, "香辣鸭腿": true, "水煮肉片": true, "花生玉米肘": true, "土豆片回锅": true, "花菜培根": true, "三月瓜鸡丁": true, "双椒肉丝": true, "臊子蒸蛋": true, "肉末豇豆": true }
+var vegetarianVisible = { "跳水笋尖": true, "芋儿白菜": true }
+var packVisible = { "西芹拌白菜": true, "茄子肉丁": true, "旺瓜肉丝": true, "肉末四季豆": true, "白油冬瓜": true, "青椒土豆片": true}
+var visible = {}
+Object.assign(visible, meatsVisible, vegetarianVisible, packVisible)
+var checkMeal = ["手撕兔", "水煮肉片", "芋儿白菜"]
+
 // 小程序内page主体，参见小程序开发文档
 Page({
 
@@ -17,6 +24,7 @@ Page({
     packMenu: pack,
     days:["周一", "周二", "周三", "周四", "周五"],
     day: "周一",
+    meatsCheck: visible
   },
 
   // 按压星期选择器时触发的动作及其逻辑反馈
@@ -26,12 +34,18 @@ Page({
     })
   },
 
+  bindElementTap: function(e) {
+    var id = e.currentTarget.id
+    visible[id] = !visible[id]
+    this.setData({
+      meatsCheck: visible
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-
   },
 
   /**
