@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/menu/menu",
+    "pages/register/register"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFF00",
+    "navigationBarTitleText": "运行人员订餐小程序",
+    "navigationBarTextStyle": "black"
+  }
+}

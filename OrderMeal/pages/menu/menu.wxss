@@ -1,0 +1,119 @@
+/* menu.wxss */
+view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13pt;
+}
+
+.element {
+  width: 96%;
+  height: 70rpx;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 0.5px solid dimgray;
+  border-radius: 8px;
+  margin: 5rpx;
+}
+
+.element .mealName {
+  width: 225rpx;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+.element .mealInfo {
+  width: 150rpx;
+  justify-content: flex-start;
+}
+.element .mealInfo text {
+  width: 90rpx;
+}
+.element .mealInfo icon {
+  width: 60rpx;
+}
+
+.menuInfo {
+  width: 746rpx;
+  height: 100rpx;
+  background-color: #EFEFEF;
+  justify-content: space-between;
+  border: 1px solid dimgray;
+}
+.menuInfo text {
+  font-size: 10pt;
+  color: rgb(136, 136, 136);
+  margin: 10rpx;
+}
+.menuInfo .dayPicker {
+  width: 150rpx;
+  height: 65rpx;
+  position: relative;
+  left: -40rpx;
+  background-color: white;
+  color: rgb(87, 107, 149);
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.menuInfo .dayPicker image {
+  width: 20rpx;
+  height: 45rpx;
+  margin-left: 10rpx;
+}
+.menuInfo .dinner text {
+  position: relative;
+  left: 20rpx;
+}
+.menuInfo .dinner image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.menuView {
+  width: 100%;
+  background-color: #EFEFEF;
+  flex-direction: row;
+}
+.menuView .left {
+  width: 50%;
+  height: 902rpx;
+  flex-direction: column;
+}
+.menuView .left .element {
+  background-color: rgba(230, 67, 64, 0.1);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-right: 1px solid dimgray;
+}
+
+.menuView .right {
+  width: 50%;
+  height: 902rpx;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menuView .right .vegetarian {
+  width: 100%;
+  flex-direction: column;
+}
+.menuView .right .vegetarian .element {
+  background-color: rgba(9, 187, 7, 0.1);
+}
+.menuView .right .pack {
+  width: 100%;
+  flex-direction: column;
+}
+.menuView .right .pack .element {
+  background-color: rgba(87, 107, 149, 0.1);
+}
+
+.submit {
+  width: 750rpx;
+  height: 200rpx;
+  background-color: #EFEFEF;
+}
+.submit button {
+  color: dimgray;
+  background-color: yellow;
+}

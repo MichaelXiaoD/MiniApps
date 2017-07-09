@@ -1,0 +1,55 @@
+<!--menu.wxml-->
+<view class="menuInfo">
+  <text>2017年7月4日</text>
+  <view class="dayPicker">
+    <picker mode="selector" range="{{days}}" bindchange="bindDayChange">
+    {{day}}
+    </picker>
+    <image src="/images/icons/selector.png" mode="aspectFit"></image>
+  </view>
+  <view class="dinner">
+    <text>晚餐</text>
+    <image src="/images/icons/navigator.png" mode="aspectFit"></image>
+  </view>
+</view>
+
+<view class="menuView">
+  <view class="left">
+    <block wx:for="{{meatMenu}}" wx:key="{{index}}">
+      <view class="element">
+        <view class="mealName"> {{index}} </view>
+        <view class="mealInfo"> 
+          <text>¥{{item}}</text>
+          <icon type="success_no_circle" hidden="{{false}}"/>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="right">
+    <view class="vegetarian">
+      <block wx:for="{{vegetarianMenu}}" wx:key="{{index}}">
+        <view class="element">
+          <view class="mealName"> {{index}} </view>
+          <view class="mealInfo"> 
+            <text>¥{{item}}</text>
+            <icon type="success_no_circle" hidden="{{false}}"/>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="pack">
+      <block wx:for="{{packMenu}}" wx:key="{{index}}">
+        <view class="element">
+          <view class="mealName"> {{item}} </view>
+          <view class="mealInfo"> 
+            <icon type="success_no_circle" hidden="{{false}}"/>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>  
+</view>
+
+<view class="submit">
+  <button>提交订餐</button>
+</view>
