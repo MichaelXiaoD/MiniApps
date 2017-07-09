@@ -1,4 +1,7 @@
 <!--menu.wxml-->
+<!--调试请下载微信小程序开发工具https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html-->
+
+<!--菜单信息区域：包括时间等-->
 <view class="menuInfo">
   <text>2017年7月4日</text>
   <view class="dayPicker">
@@ -13,7 +16,9 @@
   </view>
 </view>
 
+<!--菜单主体区域-->
 <view class="menuView">
+  <!--菜单区域左侧荤菜栏-->
   <view class="left">
     <block wx:for="{{meatMenu}}" wx:key="{{index}}">
       <view class="element">
@@ -25,7 +30,9 @@
       </view>
     </block>
   </view>
+  <!--菜单区域右侧区域-->
   <view class="right">
+    <!--菜单右侧素菜区-->
     <view class="vegetarian">
       <block wx:for="{{vegetarianMenu}}" wx:key="{{index}}">
         <view class="element">
@@ -37,6 +44,7 @@
         </view>
       </block>
     </view>
+    <!--菜单右侧套餐区-->
     <view class="pack">
       <block wx:for="{{packMenu}}" wx:key="{{index}}">
         <view class="element">
@@ -50,6 +58,7 @@
   </view>  
 </view>
 
+<!--菜单提交区域-->
 <view class="submit">
   <button>提交订餐</button>
 </view>
