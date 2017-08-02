@@ -6,7 +6,7 @@
   <text>2017年7月4日</text>
   <view class="dayPicker">
     <picker mode="selector" range="{{days}}" bindchange="bindDayChange">
-    {{day}}
+      {{day}}
     </picker>
     <image src="/images/icons/selector.png" mode="aspectFit"></image>
   </view>
@@ -23,9 +23,9 @@
     <block wx:for="{{meatMenu}}" wx:key="{{index}}">
       <view class="element" id="{{index}}" bindtap="bindElementTap">
         <view class="mealName"> {{index}} </view>
-        <view class="mealInfo"> 
+        <view class="mealInfo">
           <text>¥{{item}}</text>
-          <icon type="success_no_circle" hidden="{{meatsCheck[index]}}"/>
+          <icon type="success_no_circle" hidden="{{meatsCheck[index]}}" />
         </view>
       </view>
     </block>
@@ -37,9 +37,9 @@
       <block wx:for="{{vegetarianMenu}}" wx:key="{{index}}">
         <view class="element" id="{{index}}" bindtap="bindElementTap">
           <view class="mealName"> {{index}} </view>
-          <view class="mealInfo"> 
+          <view class="mealInfo">
             <text>¥{{item}}</text>
-            <icon type="success_no_circle" hidden="{{meatsCheck[index]}}"/>
+            <icon type="success_no_circle" hidden="{{meatsCheck[index]}}" />
           </view>
         </view>
       </block>
@@ -49,16 +49,19 @@
       <block wx:for="{{packMenu}}" wx:key="{{index}}">
         <view class="element" id="{{item}}" bindtap="bindElementTap">
           <view class="mealName"> {{item}} </view>
-          <view class="mealInfo"> 
-            <icon type="success_no_circle" hidden="{{meatsCheck[item]}}"/>
+          <view class="mealInfo">
+            <icon type="success_no_circle" hidden="{{meatsCheck[item]}}" />
           </view>
         </view>
       </block>
     </view>
-  </view>  
+  </view>
 </view>
 
 <!--菜单提交区域-->
 <view class="submit">
   <button>提交订餐</button>
+  <view class="btn-area">
+    <navigator url="/pages/register/register" hover-class="navigator-hover">跳转到注册页</navigator>
+  </view>
 </view>

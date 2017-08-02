@@ -1,26 +1,27 @@
-<!--register.wxml-->
-<view class="section">
-  <view class="section__title">地区选择器</view>
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-    <view class="picker">
-      当前选择：{{array[index]}}
-    </view>
-  </picker>
-</view>
-<view class="section">
-  <view class="section__title">时间选择器</view>
-  <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-    <view class="picker">
-      当前选择: {{time}}
-    </view>
-  </picker>
+<view class="name">姓名：
+  <input class="input" name="userName" placeholder="请输入姓名" bindinput="userNameInput" />
 </view>
 
-<view class="section">
-  <view class="section__title">日期选择器</view>
-  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-    <view class="picker">
-      当前选择: {{date}}
-    </view>
+<view class="department">
+  <view class="department__title">科室：</view>
+  <view class="picker">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    
+      {{array[index]}}
+    
+    <image src="/images/icons/selector.png" mode="aspectFit"></image>
   </picker>
+  </view>
+</view>
+
+<view class="phone">电话：
+  <input class="input" type="number" phone="phonenumber" placeholder="" bindinput="phoneInput" />
+</view>
+
+<view class="number">工号：
+  <input class="input" number="jobnumber" placeholder="" bindinput="numberInput" />
+</view>
+
+<view class="register">
+  <button>登记</button>
 </view>
